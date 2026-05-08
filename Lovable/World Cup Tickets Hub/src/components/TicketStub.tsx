@@ -1,7 +1,7 @@
 import React from 'react';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
-import { QRCodeSVG } from 'qrcode.react';
+import { QRCodeCanvas } from 'qrcode.react';
 import { Trophy, MapPin, Calendar, Clock, User, ShieldCheck } from 'lucide-react';
 
 export interface TicketData {
@@ -378,7 +378,7 @@ export const TicketStub: React.FC<TicketStubProps> = ({
               display: 'inline-block',
             }}
           >
-            <QRCodeSVG
+            <QRCodeCanvas
               value={qrUrl}
               size={140}
               level="M"
